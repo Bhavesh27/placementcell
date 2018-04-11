@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" href="placementcell_icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel</title>
+    <style>
+    body { font: 14px Georgia, serif; background-image:url("admin.jpg"); background-repeat: no-repeat; background-size: cover; }
+    </style>
+</head>
+
+<body>
+    <a href="logoutadmin.php">Logout</a>
+    <div id="container" style="width:100%;">
+        <div id="left" style="float:left; width:50%;">
+            <center>
+                <h1>Student Database</h1>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <button onclick="studsignup.php">ADD NEW RECORD</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="studupdate.php">UPDATE RECORD</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="studdelete.php">DELETE RECORD</button>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+        <div id="right" style="float:right; width:50%;">
+            <center>
+                <h1>Company Database</h1>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <button onclick="window.open('signup.html')";>ADD NEW RECORD</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="compupdate.php">UPDATE RECORD</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="compdelete.php">DELETE RECORD</a>
+                        </td>
+                    </tr>
+                </table>
+                <center>
+
+        </div>
+    </div>
+</body>
+
+</html>

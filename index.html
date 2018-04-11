@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Placement Cell</title>
+  <link rel="shortcut icon" href="placementcell_icon.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <style>
+   body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  .p {font-size: 15px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+      background-color: #B95944;
+      color: #ffffff;
+  }
+  .bg-2 {
+      background-color: #C2C6C8;
+      color: #ffffff;
+  }
+  .bg-3 {
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bcarousal{
+    margin-top: 50px;
+  }
+  .bg-4 {
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .carousel-inner > .item > img {
+  width:640px;
+  height:360px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#one">Placement Cell</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#two">ABOUT US</a></li>
+        <li><a href="#three">OUR RECRUITERS</a></li>
+        <li><a href="#four">CONTACT US</a></li>
+        <li><a href="loginform.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div id="one" class="container-fluid bg-1 text-center">
+  <div class="container bcarousal">
+    <div id="myCarousel" class="carousel slide carousel-inner" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators" color="red">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+      </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="banner/banner1.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="banner/banner2.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="banner/banner3.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="banner/banner4.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="banner/banner5.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="banner/banner6.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="banner/banner7.png" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+</div>
+
+
+<div id="two"class="container-fluid bg-2 text-center">
+  <h3 class="margin">ABOUT US</h3>
+  <div class="p">
+    <p>
+      The Placement Cell plays a crucial role in locating job opportunities for Under Graduates and Post Graduates passing out from the college by keeping in touch with reputed firms and industrial establishments. The Placement Cell operates round the year to facilitate contacts between companies and graduates. The number of students placed through the campus interviews is continuously rising. On invitation, many reputed industries visit the institute to conduct interviews.We have been successful in maintaining our high placement statistics over the years and the fact that our students bear the recession blues with record breaking placements itself is a testimony to our quality.</p>
+    <p>
+      Our ingenious alumnae have set new standards in the corporate world through their estimable contributions and it is my firm conviction that we will continue that legacy in the years to come.The Placement Cell organizes career guidance programmes for all the students starting from first year. The cell arranges training programmes like Mock Interviews, Group Discussions, Communication Skills Workshop etc and it also organizes Public Sector Exam Training for students who are interested to join Government Sectors. It also invites HR Managers from different industries to conduct training programmes for final year students.
+    </p>
+  </div>
+  <div class="about_img"><img src="about-us.jpg" class="img-circle" width="304" height="236"> </div>
+</div>
+
+
+<div id="three" class="container-fluid bg-3 text-center">
+  <style>
+  .row > .column {
+    padding: 0 8px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+.cursor {
+    cursor: pointer
+  }
+  img {
+    margin-bottom: -4px;
+  }
+  img.hover-shadow {
+    transition: 0.3s
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  }
+  .parent {
+   width: 20%; /* I took the width from your post and placed it in css */
+   height: 140px;
+}
+
+/* This will style any <img> element in .parent div */
+.parent img {
+   height: 100%;
+   width: 100%;
+   padding: 10px;
+}
+  </style>
+
+  <h2 style="text-align:center">OUR RECRUITERS</h2><br>
+
+  <div class="row">
+    <div class="column parent">
+      <a href="https://www.google.co.in/intl/en_in/about/?utm_source=google.com&utm_medium=referral&utm_campaign=hp-footer&fg=1" target="_blank"><img src="recruiters/google.png" style="width:100%" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.intel.in/content/www/in/en/homepage.html" target="_blank"><img src="recruiters/Intel.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.microsoft.com/en-in" target="_blank"><img src="recruiters/microsoft.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="http://www.samsung.com/in" target="_blank"><img src="recruiters/samsung.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.amazon.in" target="_blank"><img src="recruiters/amazon.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column parent">
+      <a href="https://www.mastercard.us/en-us.html" target="_blank"><img src="recruiters/Mastercard.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.apple.com/in" target="_blank"><img src="recruiters/Apple.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.netflix.com" target="_blank"><img src="recruiters/netflix.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.infosys.com" target="_blank"><img src="recruiters/Infosys.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://online.pizzahut.co.in" target="_blank"><img src="recruiters/pizzahut.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column parent">
+      <a href="https://www.cisco.com/c/en_in/index.html" target="_blank"><img src="recruiters/cisco.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="http://www.tata.com" target="_blank"><img src="recruiters/tata.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.india.ford.com" target="_blank"><img src="recruiters/ford.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="http://www.hp.com/" target="_blank"><img src="recruiters/hp.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+    <div class="column parent">
+      <a href="https://www.paypal.com" target="_blank"><img src="recruiters/paypal.png" style="width:100%" onclick="" class="hover-shadow cursor img-rounded"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="four"class="container-fluid bg-4 text-center">
+  <p>Made By <a href="https://www.facebook.com/profile.php?id=100004658675956" target="_blank">Mayank Kumar</a></p>
+</footer>
+<div class="bg-4 text-center">
+    DISCLAIMER: This website is for educational purpose only and the owner is not accountable for any misuse or misunderstanding.
+</div>
+
+</body>
+</html>
