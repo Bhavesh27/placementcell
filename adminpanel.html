@@ -11,46 +11,59 @@
 
 <body>
     <a href="logoutadmin.php">Logout</a>
-    <div id="container" style="width:100%;">
-        <div id="left" style="float:left; width:50%;">
+    <div id="container" style="height: 100%;">
+        <div id="left" style="float:top; height:50%;">
             <center>
                 <h1>Student Database</h1>
                 <table border="2">
                     <tr>
-                        <td>
-                            <a href="studsignup.php"><button>ADD NEW RECORD</button></a>
+                        <td><center>
+                            <a href="studsignup.php"><button>ADD NEW RECORD</button></a></center>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="studupdate.php"><button> UPDATE  RECORD</button></a>
+                            <form action="studupdate.php" method="POST">
+                            <input type="text" placeholder="enter the id to be updated">
+                            <button type="submit">UPDATE RECORD</button>
+                            </form>
                         </td>
+                        
                     </tr>
                     <tr>
                         <td>
-                            <a href="studdelete.php"><button> DELETE  RECORD</button></a>
+                            <form action="studdelete.php" method="POST">
+                            <input type="text" placeholder="enter the id to be deleted">
+                            <button type="submit"> DELETE  RECORD</button>
+                            </form>
                         </td>
                     </tr>
                 </table>
             </center>
         </div>
-        <div id="right" style="float:right; width:50%;">
+        <div id="right" style="float:top; height:50%;">
             <center>
                 <h1>Company Database</h1>
                 <table border="2">
                     <tr>
-                        <td>
-                            <a href="signup.html"><button>ADD NEW RECORD</button></a>
+                        <td><center>
+                            <a href="signup.html"><button>ADD NEW RECORD</button></a></center>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="compupdate.php"><button> UPDATE  RECORD</button></a>
+                            <form action="compupdate.php" method="POST">
+                            <input type="text" placeholder="enter the id to be updated">
+                            <button type="submit">UPDATE  RECORD</button>
+                            </form>            
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="compdelete.php"><button> DELETE  RECORD</button></a>
+                            <form action="compdelete.php" method="POST">
+                            <input type="text" name="Id" placeholder="enter the id to be deleted">
+                            <button type="submit">DELETE RECORD</button>
+                            </form>
                         </td>
                     </tr>
                 </table>

@@ -2,7 +2,7 @@
 
 
 	//Connect to server
-	$conn = mysqli_connect("localhost", "root", "","placementcell");
+	$conn =new mysqli("localhost", "root", "","placementcell");
 	//Select the database
 	
 

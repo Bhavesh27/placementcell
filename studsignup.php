@@ -6,7 +6,7 @@ $password = "";
 $dbname = "placementcell";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn =new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
@@ -202,7 +202,7 @@ var check = function() {
 
       <div class="clearfix">
         <button type="button" onclick="history.back();" class="cancelbtn">Cancel</button></a>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" name="submit" class="signupbtn">Sign Up</button>
       </div>
     </div>
   </form>
