@@ -8,13 +8,29 @@ if(isset($_POST['logout'])){
 }
 
 if(isset($_POST['studupdate'])){
-include('config.php');
-header('Location: ' . $_SERVER['HTTP_REFERER']);
-die();
+    include('config.php');
+    $id = $_POST['Id'];
+    $sql = "DELETE FROM basicdetails WHERE Id='$id'";
+    if ($conn->query($sql) === TRUE) {
+        header('Location: studsignup.php');
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+    $conn->close();
+    die();
 }
 if(isset($_POST['studdelete'])){
     include('config.php');
-header('Location: ' . $_SERVER['HTTP_REFERER']);    
+    $id = $_POST['Id'];
+    $sql = "DELETE FROM basicdetails WHERE Id='$id'";
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo "Error deleting record: " . $conn->error;
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+    $conn->close();
     die();
 }
 
@@ -73,7 +89,7 @@ die();
                     <tr>
                         <td>
                             <form action="adminpanel1.php" method="POST">
-                            <input type="text" placeholder="enter the id to be updated" required>
+                            <input type="text" name="Id" placeholder="enter the id to be updated" required>
                             <button type="submit" name="studupdate">UPDATE RECORD</button>
                             </form>
                         </td>
@@ -82,7 +98,7 @@ die();
                     <tr>
                         <td>
                             <form action="adminpanel1.php" method="POST">
-                            <input type="text" placeholder="enter the id to be deleted" required>
+                            <input type="text" name="Id" placeholder="enter the id to be deleted" required>
                             <button type="submit" name="studdelete"> DELETE  RECORD</button>
                             </form>
                         </td>
