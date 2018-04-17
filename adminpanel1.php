@@ -1,12 +1,20 @@
 <?php 
+if(isset($_POST['logout'])){
+    session_start();
+    unset($_SESSION['loggedIn']);
+    session_destroy();
+    header("Location: loginform.php");
+    exit;
+}
+
 if(isset($_POST['studupdate'])){
 include('config.php');
-
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 die();
 }
 if(isset($_POST['studdelete'])){
     include('config.php');
-    
+header('Location: ' . $_SERVER['HTTP_REFERER']);    
     die();
 }
 
@@ -50,7 +58,8 @@ die();
 </head>
 
 <body>
-    <a href="logoutadmin.php">Logout</a>
+    <form method="POST" action="adminpanel1.php">
+    <button type="submit" name="logout">Logout</button></form>
     <div id="container" style="height: 100%;">
         <div id="left" style="float:top; height:50%;">
             <center>
@@ -63,18 +72,18 @@ die();
                     </tr>
                     <tr>
                         <td>
-                            <form action="studupdate.php" method="POST">
-                            <input type="text" placeholder="enter the id to be updated">
-                            <button type="submit">UPDATE RECORD</button>
+                            <form action="adminpanel1.php" method="POST">
+                            <input type="text" placeholder="enter the id to be updated" required>
+                            <button type="submit" name="studupdate">UPDATE RECORD</button>
                             </form>
                         </td>
                         
                     </tr>
                     <tr>
                         <td>
-                            <form action="studdelete.php" method="POST">
-                            <input type="text" placeholder="enter the id to be deleted">
-                            <button type="submit"> DELETE  RECORD</button>
+                            <form action="adminpanel1.php" method="POST">
+                            <input type="text" placeholder="enter the id to be deleted" required>
+                            <button type="submit" name="studdelete"> DELETE  RECORD</button>
                             </form>
                         </td>
                     </tr>
@@ -93,7 +102,7 @@ die();
                     <tr>
                         <td>
                             <form action="adminpanel1.php" method="POST">
-                            <input type="text" name="Id" placeholder="enter the company name to be updated">
+                            <input type="text" name="Id" placeholder="enter the company name to be updated" required>
                             <button type="submit" name="compupdate">UPDATE  RECORD</button>
                             </form>            
                         </td>
@@ -101,7 +110,7 @@ die();
                     <tr>
                         <td>
                             <form action="adminpanel1.php" method="POST">
-                            <input type="text" name="Id" placeholder="enter the company name to be deleted">
+                            <input type="text" name="Id" placeholder="enter the company name to be deleted" required>
                             <button type="submit" name="compdelete">DELETE RECORD</button>
                             </form>
                         </td>
