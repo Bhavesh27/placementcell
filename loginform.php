@@ -1,3 +1,51 @@
+<?php
+if(isset($_POST['admin'])){
+session_start();
+$username = $_POST['username'];
+$userpassword = $_POST['password'];	
+if ($username == "admin" && $userpassword == "admin")
+{
+	$_SESSION['loggedIn'] = "true";
+	header("Location: adminpanel1.php");
+	die();
+}
+else
+{
+	$_SESSION['loggedIn'] = "false";
+	echo "<p>Login failed, username or password incorrect.</p>";
+}
+}
+
+if(isset($_POST['student'])){
+}
+
+if(isset($_POST['company'])){
+    session_start();
+    include_once 'config.php';
+    $username=$_POST['username'];
+    $userpassword=$_POST['password'];
+    $email=mysql_real_escape_string($_POST['username']);
+    $userpassword=mysql_real_escape_string($_POST['password']);
+    $query="SELECT * FROM basicdetails WHERE email = '$email' AND password = '$userpassword'";
+    $res=mysqli_fetch_row($query) or die ("Unable to verify user because " . mysql_error());
+    if ($res) {
+        $_SESSION['loggedIn']="true";
+        echo "<table><tr><th>ID</th><th>Name</th></tr>";
+        while($row=$res->mysqli_fetch_assoc()) {
+            echo "<tr><td>".$row["id"]."</td><td>".$row["firstname"]." ".$row["lastname"]."</td></tr>";
+        }
+        echo "</table>";
+    }
+    
+    else {
+        $_SESSION['loggedIn']="false";
+        echo "<p>Login failed, username or password incorrect.</p>";
+    }
+    
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -83,31 +131,31 @@
           <h2><center>LOGIN PAGE</center></h2><br>
           <div class="login-block">
               <h3>Company Login</h3>
-              <form  method="post" action="login.php" enctype="application/x-www-form-urlencoded">
+              <form  method="post" action="loginform.php" enctype="application/x-www-form-urlencoded">
                   <p><label>Email</label><input id="username" type="text" name="username" required/></p>
                   <p><label>Password</label><input id="password" type="password" name="password" required/></p>
                   <p class="submit-wrap">
-                    <input type="submit"  class="button" value="Login" >
-                    <a href="signup.html">sign up</a>
+                    <input type="submit"  class="button" name="company" >
+                    <a href="signup.php">sign up</a>
                   </p>
               </form>
           </div>
 
           <div class="login-block">
               <h3>Student Login</h3>
-              <form action="#" method="post">
+              <form action="loginform.php" method="post">
                   <p><label>User Name</label><input type="text" name="username" required/></p>
                   <p><label>Password</label><input type="password" name="password" required/></p>
-                  <p class="submit-wrap"><input type="submit" class="button" value="Login" /></p>
+                  <p class="submit-wrap"><input type="submit" class="button" name="student" /></p>
               </form>
           </div>
 
           <div class="login-block last">
               <h3>Administration Login</h3>
-              <form action="adminpanel.php" method="post" >
+              <form action="loginform.php" method="post" >
                   <p><label>User Name</label><input type="text" name="username" required/></p>
                   <p><label>Password</label><input type="password" name="password" required/></p>
-                  <p class="submit-wrap"><input type="submit"  class="button" value="Login" /></p>
+                  <p class="submit-wrap"><input type="submit"  class="button" name="admin" /></p>
               </form>
           </div>
   	</div>
