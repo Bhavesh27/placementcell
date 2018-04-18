@@ -80,7 +80,7 @@ echo "<hr><hr>";
 
 $query="SELECT * FROM companydetails";
 $result = mysqli_query($conn,$query);
-echo "<center><h1>Personal Information</h1><br>";
+echo "<center><h1>Recruiters Information</h1><br>";
 echo "<table border='1' bgcolor='white' align='center' width='80%'>
 <tr>
 <th>Company name</th>
