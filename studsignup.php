@@ -16,6 +16,9 @@
     <html>
 
     <head>
+    <link rel="shortcut icon" href="placementcell_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Signup</title>
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;

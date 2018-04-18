@@ -10,6 +10,10 @@ die();
 <!DOCTYPE html>
 <html>
     <head>
+        
+    <link rel="shortcut icon" href="placementcell_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Signup</title>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
