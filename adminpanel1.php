@@ -1,8 +1,5 @@
 <?php 
 if(isset($_POST['logout'])){
-    session_start();
-    unset($_SESSION['loggedIn']);
-    session_destroy();
     header("Location: loginform.php");
     exit;
 }
@@ -112,7 +109,7 @@ die();
                 <table border="2">
                     <tr>
                         <td><center>
-                            <a href="signup.html"><button>ADD NEW RECORD</button></a></center>
+                            <a href="signup.php"><button>ADD NEW RECORD</button></a></center>
                         </td>
                     </tr>
                     <tr>
